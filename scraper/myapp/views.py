@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import requests
 from bs4 import BeautifulSoup
-from models import Link
+from .models import Link
 # Create your views here.
 
 def scrape(request):
