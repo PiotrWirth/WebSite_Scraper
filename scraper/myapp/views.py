@@ -20,8 +20,8 @@ def scrape(request):
         return HttpResponseRedirect('/')
     else:
         data = Link.objects.all()
-
-
-    
-    
     return render(request, 'myapp/result.html',{'data':data})
+
+def clear(request):
+    Link.objects.all().delete()
+    return render(request,'myapp/result.html')
